@@ -1,0 +1,61 @@
+/* These rules take effect before the first paint, even during the loader. */
+.preloader__video,
+.preloader__logo,
+.header__logo-image,
+.hero__image,
+.hero__video,
+.golden-ticket,
+#golden-ticket,
+.footer__winline,
+.partners__item:has(.partners__logo--winline),
+a[href^="/winline/" i],
+a[href^="https://t.me/winline_slay_bot" i],
+img[src*="/winline." i],
+img[alt="Winline" i],
+[data-slay-clean-hidden],
+picture:has(> source[data-slay-clean-hidden]) {
+  display: none !important;
+}
+
+.hero__media {
+  background: var(--slay-clean-hero, radial-gradient(ellipse at 50% 34%, #662a21, #120d17 70%)) center 38% / cover no-repeat !important;
+}
+
+/* Keep the original carousel photos, with small cutouts over branded pixels. */
+.legends__picture {
+  container-type: size;
+}
+
+.legends__image:is(
+  [src$="/photo-1.BP9cgKYN.webp"],
+  [src$="/photo-2.DFx0EUc3.webp"],
+  [src$="/photo-4.C--sjgbx.webp"],
+  [src$="/photo-6.CXkCKU8L.webp"]
+):not([data-slay-clean-photo]) {
+  visibility: hidden !important;
+}
+
+.legends__image[data-slay-clean-photo] {
+  --slay-photo-w: max(100cqw, calc(100cqh * 1600 / 1067));
+  --slay-photo-h: max(100cqh, calc(100cqw * 1067 / 1600));
+  --slay-photo-left: calc((100cqw - var(--slay-photo-w)) / 2);
+  --slay-photo-top: calc((100cqh - var(--slay-photo-h)) / 2);
+  object-position: center !important;
+  clip-path: var(--slay-clean-photo-clip) !important;
+}
+
+[style*="url(" i][style*="winline" i] {
+  background-image: none !important;
+}
+
+.preloader__media::after,
+.header__logo::after {
+  content: "SLAY";
+  color: #ff7940;
+  font: 900 italic clamp(1.6rem, 3vw, 3rem) / 1 system-ui, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.preloader__media::after {
+  font-size: clamp(3rem, 12vw, 7rem);
+}
