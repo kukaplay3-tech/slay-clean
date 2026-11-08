@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "SLAY Clean",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Убирает брендинг Winline со страниц Slay Award.",
   "icons": {
     "16": "icon-16.png",
@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": ["https://slay-award.ru/*", "https://www.slay-award.ru/*"],
-      "css": ["hero.css", "clean.css"],
+      "css": ["hero.css", "clean.css", "photo-1.css"],
       "js": ["clean.js"],
       "run_at": "document_start"
     }

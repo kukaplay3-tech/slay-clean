@@ -27,7 +27,6 @@ picture:has(> source[data-slay-clean-hidden]) {
 }
 
 .legends__image:is(
-  [src$="/photo-1.BP9cgKYN.webp"],
   [src$="/photo-2.DFx0EUc3.webp"],
   [src$="/photo-4.C--sjgbx.webp"],
   [src$="/photo-6.CXkCKU8L.webp"]

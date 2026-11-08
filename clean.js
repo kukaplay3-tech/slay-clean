@@ -11,10 +11,6 @@
   const hide = "data-slay-clean-hidden";
   const photo = "data-slay-clean-photo";
   const photoCutouts = {
-    "photo-1.BP9cgKYN.webp": [
-      [[867, 426], [1046, 474], [1037, 510], [856, 461]],
-      [[701, 382], [750, 359], [761, 376], [709, 399]],
-    ],
     "photo-2.DFx0EUc3.webp": [
       [[709, 758], [750, 739], [762, 753], [719, 777]],
     ],
